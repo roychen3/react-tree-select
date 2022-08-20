@@ -1,0 +1,218 @@
+[
+  {
+    "name": "item name",
+    "isSelected": false,
+    "children": [
+      {
+        "name": "item name",
+        "isSelected": false,
+        "children": [
+          {
+            "name": "item name",
+            "isSelected": false,
+            "children": []
+          },
+          {
+            "name": "item name",
+            "isSelected": false,
+            "children": []
+          },
+          {
+            "name": "item name",
+            "isSelected": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "item name",
+        "isSelected": false,
+        "children": [
+          {
+            "name": "item name",
+            "isSelected": false,
+            "children": []
+          },
+          {
+            "name": "item name",
+            "isSelected": false,
+            "children": []
+          },
+          {
+            "name": "item name",
+            "isSelected": false,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "item name",
+    "isSelected": false,
+    "children": [
+      {
+        "name": "item name",
+        "isSelected": false,
+        "children": [
+          {
+            "name": "item name",
+            "isSelected": false,
+            "children": [
+              {
+                "name": "item name",
+                "isSelected": false,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "item name",
+    "isSelected": false,
+    "children": [
+      {
+        "name": "item name",
+        "isSelected": false,
+        "children": [
+          {
+            "name": "item name",
+            "isSelected": false,
+            "children": [
+              {
+                "name": "item name",
+                "isSelected": false,
+                "children": [
+                  {
+                    "name": "item name",
+                    "isSelected": false,
+                    "children": [
+                      {
+                        "name": "item name",
+                        "isSelected": false,
+                        "children": []
+                      },
+                      {
+                        "name": "item name",
+                        "isSelected": false,
+                        "children": []
+                      },
+                      {
+                        "name": "item name",
+                        "isSelected": false,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "item name",
+                    "isSelected": false,
+                    "children": [
+                      {
+                        "name": "item name",
+                        "isSelected": false,
+                        "children": []
+                      },
+                      {
+                        "name": "item name",
+                        "isSelected": false,
+                        "children": []
+                      },
+                      {
+                        "name": "item name",
+                        "isSelected": false,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "item name",
+            "isSelected": false,
+            "children": [
+              {
+                "name": "item name",
+                "isSelected": false,
+                "children": [
+                  {
+                    "name": "item name",
+                    "isSelected": false,
+                    "children": []
+                  },
+                  {
+                    "name": "item name",
+                    "isSelected": false,
+                    "children": []
+                  },
+                  {
+                    "name": "item name",
+                    "isSelected": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "item name",
+                "isSelected": false,
+                "children": [
+                  {
+                    "name": "item name",
+                    "isSelected": false,
+                    "children": []
+                  },
+                  {
+                    "name": "item name",
+                    "isSelected": false,
+                    "children": []
+                  },
+                  {
+                    "name": "item name",
+                    "isSelected": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "item name",
+            "isSelected": false,
+            "children": []
+          },
+          {
+            "name": "item name",
+            "isSelected": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "item name",
+        "isSelected": false,
+        "children": [
+          {
+            "name": "item name",
+            "isSelected": false,
+            "children": []
+          },
+          {
+            "name": "item name",
+            "isSelected": false,
+            "children": []
+          },
+          {
+            "name": "item name",
+            "isSelected": false,
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]
