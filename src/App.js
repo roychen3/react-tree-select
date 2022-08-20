@@ -1,12 +1,19 @@
-import TreeSelect, { TreeSelectContainer } from "./treeSelect";
+import React, { useState, useCallback } from "react";
 
-import datas from "./treeData.json";
+import TreeSelect from "./components/treeSelect";
+import { useTreeSelect } from "./components/treeSelect/utils";
+import treeData from "./components/treeSelect/treeData.json";
 
 function App() {
+  const { data, handleSelectOnChange } = useTreeSelect({
+    defaultData: treeData,
+  });
+
   return (
-    <TreeSelectContainer>
-      <TreeSelect datas={datas} isRoot />
-    </TreeSelectContainer>
+    <TreeSelect
+      data={data}
+      handleSelectOnChange={handleSelectOnChange}
+    />
   );
 }
 
