@@ -1,0 +1,204 @@
+[
+  {
+    "name": "企業融資",
+    "checked": false,
+    "children": [
+      {
+        "name": "營運週轉金",
+        "checked": false,
+        "children": [
+          {
+            "name": "短期放款",
+            "checked": false,
+            "children": []
+          },
+          {
+            "name": "墊付國內票款",
+            "checked": false,
+            "children": []
+          },
+          {
+            "name": "透支",
+            "checked": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "中長期融資",
+        "checked": false,
+        "children": [
+          {
+            "name": "中長期放款",
+            "checked": false,
+            "children": []
+          },
+          {
+            "name": "資本性融資",
+            "checked": false,
+            "children": []
+          },
+          {
+            "name": "聯貸業務",
+            "checked": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "應收帳款承購",
+        "checked": false,
+        "children": [
+          {
+            "name": "Factoring",
+            "checked": false,
+            "children": []
+          },
+          {
+            "name": "簡易票據融資",
+            "checked": false,
+            "children": []
+          },
+          {
+            "name": "供應商融資",
+            "checked": false,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "貸款",
+    "checked": false,
+    "children": [
+      {
+        "name": "房屋貸款",
+        "checked": false,
+        "children": [
+          {
+            "name": "適合我的方案",
+            "checked": false,
+            "children": []
+          },
+          {
+            "name": "房屋貸款試算",
+            "checked": false,
+            "children": []
+          },
+          {
+            "name": "安居樂齡房貸",
+            "checked": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "汽車貸款",
+        "checked": false,
+        "children": [
+          {
+            "name": "適合我的方案",
+            "checked": false,
+            "children": []
+          },
+          {
+            "name": "線上申請車貸",
+            "checked": false,
+            "children": []
+          },
+          {
+            "name": "車貸月付金試算",
+            "checked": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "信用貸款",
+        "checked": false,
+        "children": [
+          {
+            "name": "適合我的方案",
+            "checked": false,
+            "children": []
+          },
+          {
+            "name": "信貸線上申請",
+            "checked": false,
+            "children": []
+          },
+          {
+            "name": "一分鐘試算",
+            "checked": false,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "存款",
+    "checked": false,
+    "children": [
+      {
+        "name": "臺幣",
+        "checked": false,
+        "children": [
+          {
+            "name": "活期存款",
+            "checked": false,
+            "children": []
+          },
+          {
+            "name": "定期存款",
+            "checked": false,
+            "children": []
+          },
+          {
+            "name": "綜合存款",
+            "checked": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "晶片金融卡",
+        "checked": false,
+        "children": [
+          {
+            "name": "卡片介紹",
+            "checked": false,
+            "children": []
+          },
+          {
+            "name": "消費扣款與跨國提款",
+            "checked": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "外匯",
+        "checked": false,
+        "children": [
+          {
+            "name": "外幣存款",
+            "checked": false,
+            "children": []
+          },
+          {
+            "name": "外幣匯款",
+            "checked": false,
+            "children": []
+          },
+          {
+            "name": "外幣現鈔",
+            "checked": false,
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]

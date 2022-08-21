@@ -1,9 +1,5 @@
 /*  Nested Function List */
 @media (max-width: 768px) {
-  #nested-List {
-    padding: 10px;
-  }
-
   #nested-List ul {
     list-style: none;
     position: relative;

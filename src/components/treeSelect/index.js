@@ -1,14 +1,16 @@
-import React, { memo } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 import "./styles.css";
 
-const Tree = ({ data, isRoot, prevDataPath, handleOnChange }) => {
+const Tree = ({ data, isRoot, prevDataPath, handleChange }) => {
   return (
     <>
       {data.map((item, itemIdx) => {
         const dataPath = [...prevDataPath];
         dataPath.push(itemIdx);
+
+        if (item.display === false) return null;
 
         return (
           <ul key={itemIdx} className={isRoot ? "root" : ""}>
@@ -19,7 +21,7 @@ const Tree = ({ data, isRoot, prevDataPath, handleOnChange }) => {
                   checked={item.checked}
                   onChange={(event) => {
                     dataPath.push("checked");
-                    handleOnChange({ dataPath, event });
+                    handleChange({ dataPath, event });
                   }}
                 />
                 {item.name}
@@ -29,7 +31,7 @@ const Tree = ({ data, isRoot, prevDataPath, handleOnChange }) => {
                   <Tree
                     data={item.children}
                     prevDataPath={[...dataPath, "children"]}
-                    handleOnChange={handleOnChange}
+                    handleChange={handleChange}
                   />
                 </div>
               )}
@@ -48,18 +50,18 @@ Tree.propTypes = {
   data: PropTypes.array.isRequired,
   isRoot: PropTypes.bool,
   prevDataPath: PropTypes.array,
-  handleOnChange: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
 };
 
-const TreeSelect = memo(({ data, handleSelectOnChange }) => {
+const TreeSelect = ({ data, handleSelectChange }) => {
   return (
     <div id="nested-List">
-      <Tree data={data} isRoot handleOnChange={handleSelectOnChange} />
+      <Tree data={data} isRoot handleChange={handleSelectChange} />
     </div>
   );
-});
+};
 TreeSelect.propTypes = {
   data: PropTypes.array.isRequired,
-  handleSelectOnChange: PropTypes.func.isRequired,
+  handleSelectChange: PropTypes.func.isRequired,
 };
 export default TreeSelect;
