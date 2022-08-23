@@ -1,10 +1,9 @@
 import { useState } from "react";
 import {
-  setObjAndAllChildren,
+  setObjAndAllDisplayChildren,
   setObAllParent,
   setAndCheckAllParent,
   deepSearch,
-  deepCheckObj,
 } from "./utils";
 
 export const useTreeSelect = ({ defaultData }) => {
@@ -13,7 +12,7 @@ export const useTreeSelect = ({ defaultData }) => {
   const handleSelectChange = ({ dataPath, event }) => {
     const changedData = JSON.parse(JSON.stringify(data));
     const eventChecked = event.target.checked;
-    setObjAndAllChildren(changedData, dataPath, eventChecked);
+    setObjAndAllDisplayChildren(changedData, dataPath, eventChecked);
     if (eventChecked) {
       setObAllParent(changedData, dataPath, true);
     } else {
@@ -24,9 +23,8 @@ export const useTreeSelect = ({ defaultData }) => {
 
   const handleSearch = (keyWord) => {
     const regKeyWord = new RegExp(keyWord);
-    const changedData = deepSearch({ data, regKeyWord });
-    const checkedData = deepCheckObj(changedData);
-    setData(checkedData);
+    const matchedData = deepSearch({ data, regKeyWord });
+    setData(matchedData);
   };
 
   return { data, handleSelectChange, handleSearch };

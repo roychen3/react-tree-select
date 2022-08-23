@@ -1,26 +1,28 @@
+const getChecked = (item) => item.checked === true;
+
 export const setObj = (obj, path, value) => {
   const [head, ...restPath] = path;
   restPath.length ? setObj(obj[head], restPath, value) : (obj[head] = value);
 };
 
-export const setObjAllValue = (obj, value) => {
+export const setDisplayObjAllChecked = (obj, value) => {
   obj.forEach((_, idx) => {
     if (obj[idx].display !== false) {
       obj[idx].checked = value;
     }
 
     if (obj[idx].children.length) {
-      setObjAllValue(obj[idx].children, value);
+      setDisplayObjAllChecked(obj[idx].children, value);
     }
   });
 };
 
-export const setObjAndAllChildren = (obj, path, value) => {
+export const setObjAndAllDisplayChildren = (obj, path, value) => {
   const [head, ...restPath] = path;
   if (restPath.length) {
-    setObjAndAllChildren(obj[head], restPath, value);
+    setObjAndAllDisplayChildren(obj[head], restPath, value);
   } else {
-    setObjAllValue(obj.children, value);
+    setDisplayObjAllChecked(obj.children, value);
     obj[head] = value;
   }
 };
@@ -37,8 +39,6 @@ export const setObAllParent = (obj, path, value) => {
   }
 };
 
-const filterDisplay = (item) => item.display !== false;
-
 export const setAndCheckAllParent = (obj, path) => {
   const [head, ...restPath] = path;
 
@@ -47,9 +47,7 @@ export const setAndCheckAllParent = (obj, path) => {
     if (deepValue) return deepValue;
 
     if (obj.children) {
-      const getChecked = (item) => item.checked === true;
-      const findItem = obj.children.filter(filterDisplay).find(getChecked);
-      const value = Boolean(findItem);
+      const value = obj.children.some(getChecked);
       obj.checked = value;
       return value;
     }
@@ -68,30 +66,14 @@ export const deepSearch = ({ data, regKeyWord, parentIsMatched = false }) => {
     });
 
     const checkDisplay = (item) => item.display === true;
-    const childrenHasDisplay = isMatched || children.some(checkDisplay);
+    const childrenHasDisplay = children.some(checkDisplay);
 
     return {
       ...item,
       children,
-      display: childrenHasDisplay || isMatched,
+      display: isMatched || childrenHasDisplay,
+      disabled: !isMatched,
     };
   };
   return data.map(matchTree);
-};
-
-export const deepCheckObj = (data) => {
-  const checkObj = (item) => {
-    const children = deepCheckObj(item.children);
-    const checkChecked = (item) => item.checked;
-    const childrenHasChecked = children.length
-      ? children.filter(filterDisplay).some(checkChecked)
-      : item.checked;
-
-    return {
-      ...item,
-      children,
-      checked: childrenHasChecked,
-    };
-  };
-  return data.map(checkObj);
 };
