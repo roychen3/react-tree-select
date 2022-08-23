@@ -20,9 +20,12 @@ const Tree = ({ data, isRoot, prevDataPath, handleChange }) => {
                   type="checkbox"
                   checked={item.checked}
                   onChange={(event) => {
-                    dataPath.push("checked");
-                    handleChange({ dataPath, event });
+                    if (item.disabled !== true) {
+                      dataPath.push("checked");
+                      handleChange({ dataPath, event });
+                    }
                   }}
+                  disabled={item.disabled}
                 />
                 {item.name}
               </label>
