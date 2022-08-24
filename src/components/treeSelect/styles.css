@@ -24,7 +24,7 @@
   #nested-List ul:after {
     position: absolute;
     left: 10px;
-    bottom: -10px;
+    bottom: 0px;
     content: "";
     display: block;
     border-left: 2px solid #ddd;
