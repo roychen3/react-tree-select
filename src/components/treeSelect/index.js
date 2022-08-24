@@ -20,14 +20,14 @@ const Tree = ({ data, isRoot, prevDataPath, handleChange }) => {
                   type="checkbox"
                   checked={item.checked}
                   onChange={(event) => {
-                    if (item.searchDisabled !== true) {
+                    if (item.disabled !== true && item.searchDisabled !== true) {
                       dataPath.push("checked");
                       handleChange({ dataPath, event });
                     }
                   }}
-                  disabled={item.searchDisabled}
+                  disabled={item.disabled || item.searchDisabled}
                 />
-                <span className={item.searchDisabled ? 'disabled' : ''}>{item.name}</span>
+                <span className={item.disabled ? 'readonly' : item.searchDisabled ? 'disabled' : ''}>{item.name}</span>
               </label>
               {item.children.length > 0 && (
                 <div>
