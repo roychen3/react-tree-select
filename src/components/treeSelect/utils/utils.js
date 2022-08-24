@@ -7,7 +7,7 @@ export const setObj = (obj, path, value) => {
 
 export const setDisplayObjAllChecked = (obj, value) => {
   obj.forEach((_, idx) => {
-    if (obj[idx].display !== false) {
+    if (obj[idx].searchDisplay !== false) {
       obj[idx].checked = value;
     }
 
@@ -65,14 +65,14 @@ export const deepSearch = ({ data, regKeyWord, parentIsMatched = false }) => {
       parentIsMatched: isMatched,
     });
 
-    const checkDisplay = (item) => item.display === true;
+    const checkDisplay = (item) => item.searchDisplay === true;
     const childrenHasDisplay = children.some(checkDisplay);
 
     return {
       ...item,
       children,
-      display: isMatched || childrenHasDisplay,
-      disabled: !isMatched,
+      searchDisplay: isMatched || childrenHasDisplay,
+      searchDisabled: !isMatched,
     };
   };
   return data.map(matchTree);

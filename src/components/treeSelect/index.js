@@ -10,7 +10,7 @@ const Tree = ({ data, isRoot, prevDataPath, handleChange }) => {
         const dataPath = [...prevDataPath];
         dataPath.push(itemIdx);
 
-        if (item.display === false) return null;
+        if (item.searchDisplay === false) return null;
 
         return (
           <ul key={itemIdx} className={isRoot ? "root" : ""}>
@@ -20,14 +20,14 @@ const Tree = ({ data, isRoot, prevDataPath, handleChange }) => {
                   type="checkbox"
                   checked={item.checked}
                   onChange={(event) => {
-                    if (item.disabled !== true) {
+                    if (item.searchDisabled !== true) {
                       dataPath.push("checked");
                       handleChange({ dataPath, event });
                     }
                   }}
-                  disabled={item.disabled}
+                  disabled={item.searchDisabled}
                 />
-                {item.name}
+                <span className={item.searchDisabled ? 'disabled' : ''}>{item.name}</span>
               </label>
               {item.children.length > 0 && (
                 <div>
