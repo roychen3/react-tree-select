@@ -6,7 +6,7 @@ import {
   deepSearch,
 } from "./utils";
 
-export const useTreeSelect = ({ defaultData }) => {
+const useTreeSelect = ({ defaultData }) => {
   const [data, setData] = useState(defaultData);
 
   const handleSelectChange = ({ dataPath, event }) => {
@@ -29,3 +29,5 @@ export const useTreeSelect = ({ defaultData }) => {
 
   return { data, handleSelectChange, handleSearch };
 };
+
+export default useTreeSelect;

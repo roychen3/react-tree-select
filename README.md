@@ -1,3 +1,58 @@
+### DEMO
+https://roychen3.github.io/react-tree-select/
+
+<br />
+
+## TreeSelect - data shape
+name - leaf name.
+<br />
+checked - checkbox checked.
+<br />
+children - nested tree.
+<br />
+disabled - if 'true', this leaf can not edit.
+
+#### after search
+searchDisplay - if 'true', show leaf.
+<br />
+searchDisabled - if leaf name not match, then this leaf can not edit.
+
+<br />
+
+### Usage
+```jsx
+import React from "react";
+
+import SearchBar from "./components/searchBar";
+
+import TreeSelect from "./components/treeSelect";
+import useTreeSelect from "./components/treeSelect/useTreeSelect";
+import demoData from "./components/treeSelect/mockData/demoData.json";
+
+function App() {
+  const { data, handleSelectChange, handleSearch } = useTreeSelect({
+    defaultData: demoData,
+  });
+
+  return (
+    <>
+      <SearchBar handleSearch={handleSearch} />
+      <TreeSelect data={data} handleSelectChange={handleSelectChange} />
+    </>
+  );
+}
+
+export default App;
+```
+
+<br />
+
+### node v16.15.0
+
+<br />
+<br />
+<br />
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

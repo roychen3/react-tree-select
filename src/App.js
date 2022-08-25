@@ -3,7 +3,7 @@ import React from "react";
 import SearchBar from "./components/searchBar";
 
 import TreeSelect from "./components/treeSelect";
-import { useTreeSelect } from "./components/treeSelect/utils";
+import useTreeSelect from "./components/treeSelect/useTreeSelect";
 // import treeData from "./components/treeSelect/mockData/treeData.json";
 import demoData from "./components/treeSelect/mockData/demoData.json";
 

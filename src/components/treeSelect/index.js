@@ -22,7 +22,7 @@ const Tree = ({ data, isRoot, prevDataPath, handleChange }) => {
                   onChange={(event) => {
                     if (item.disabled !== true && item.searchDisabled !== true) {
                       dataPath.push("checked");
-                      handleChange({ dataPath, event });
+                      handleChange({ dataPath, event, item });
                     }
                   }}
                   disabled={item.disabled || item.searchDisabled}
